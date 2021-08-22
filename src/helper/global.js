@@ -1,6 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
+
+background: ${({ theme }) => theme.primaryDark};
+color: ${({ theme }) => theme.primaryLight};
 html, body {
     margin: 0;
     padding: 0;

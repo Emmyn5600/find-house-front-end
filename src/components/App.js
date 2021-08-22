@@ -12,7 +12,7 @@ function App() {
         <div className="App">
           <h1>Hello world</h1>
           <img src="https://www.rocketmortgage.com/resources-cmsassets/RocketMortgage.com/Article_Images/Large_Images/TypesOfHomes/types-of-homes-hero.jpg" alt="burger icon" />
-          <small>Icon made by Freepik from www.flaticon.com</small>
+          <small>Made by Emmy from www.esconnect.com</small>
         </div>
       </>
     </ThemeProvider>
