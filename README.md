@@ -1,4 +1,29 @@
-# Getting Started with Create React App
+![](https://img.shields.io/badge/Microverse-blueviolet)
+
+# Find My House
+
+> 
+
+## How it looks
+
+![screenshot](./img1.png)
+![screenshot](./img2.png)
+
+## Built With
+
+- React
+- Redux
+- CSS
+
+# Live demo
+
+Visit [this link]()
+
+# Getting Started
+
+**To get the local copy of the project up and running you will need to run the following commands on your terminal:**
+
+`git clone https://github.com/Emmyn5600/find-house-front-end.git`
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -6,7 +31,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `yarn start`
+### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -14,12 +39,14 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `yarn test`
+### `npm test`
+
+![Testing](./img3.png)
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+### `npm build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -29,7 +56,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+### `npm eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
@@ -65,6 +92,33 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `yarn build` fails to minify
+### `npm build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+👤 **NSABIMANA Emmanuel**
+
+- GitHub: [@emmyn5600](https://github.com/Emmyn5600)
+- Twitter: [@NSABIMA62253884](https://twitter.com/NSABIMA62253884)
+- LinkedIn: [@nsabimana-emmanuel-4276091b2](https://www.linkedin.com/in/nsabimana-emmanuel-4276091b2/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](hhttps://github.com/Emmyn5600/find-house-front-end/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!❤️
+
+## Acknowledgments
+
+- Microverse
+- [Cuberto](https://dribbble.com/cuberto) for the design inspiration
+
+## License
+
+The MIT License (MIT)
+
+Copyright (c) 2021 [NSABIMANA Emmanuel](emmanuelnsabimana.netlify.app/)
