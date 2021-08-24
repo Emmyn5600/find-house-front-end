@@ -1,10 +1,11 @@
 import styled from 'styled-components';
-
+/* eslint no-confusing-arrow: */
 export const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: center;
   background: ${({ theme }) => theme.primaryLight};
+  transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
   height: 100vh;
   text-align: left;
   padding: 2rem;
@@ -12,7 +13,6 @@ export const StyledMenu = styled.nav`
   top: 0;
   left: 0;
   transition: transform 0.3s ease-in-out;
-  transform: translateX(-100%);
   @media (max-width: ${({ theme }) => theme.mobile}) {
     width: 100%;
   }
