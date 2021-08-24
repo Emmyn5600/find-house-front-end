@@ -7,6 +7,11 @@ color: ${({ theme }) => theme.primaryLight};
 html, body {
     margin: 0;
     padding: 0;
+    overflow-x:hidden;
+    @media (max-width: ${({ theme }) => theme.mobile}) {
+      width: 190%;
+      align-items: center;
+    }
   }
   *, *::after, *::before {
     box-sizing: border-box;

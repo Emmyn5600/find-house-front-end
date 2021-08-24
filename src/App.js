@@ -17,9 +17,9 @@ function App() {
         <Burger />
         <Menu />
         <div className="App">
-          <h1>Hello world</h1>
+          <h1>Find My House</h1>
           <img src="https://www.rocketmortgage.com/resources-cmsassets/RocketMortgage.com/Article_Images/Large_Images/TypesOfHomes/types-of-homes-hero.jpg" alt="burger icon" />
-          <small>Made by Emmy from www.esconnect.com</small>
+          <small>Made by Emmy</small>
         </div>
         <div ref={node}>
           <Burger open={open} setOpen={setOpen} />

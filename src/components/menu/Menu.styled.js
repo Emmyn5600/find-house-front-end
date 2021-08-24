@@ -8,27 +8,27 @@ export const StyledMenu = styled.nav`
   transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
   height: 100vh;
   text-align: left;
-  padding: 2rem;
+  padding: 1rem;
   position: absolute;
   top: 0;
   left: 0;
   transition: transform 0.3s ease-in-out;
   @media (max-width: ${({ theme }) => theme.mobile}) {
-    width: 100%;
+    width: 40%;
   }
 
   a {
-    font-size: 2rem;
-    text-transform: uppercase;
-    padding: 2rem 0;
+    font-size: 1rem;
+    text-transform: downcase;
+    padding: 1rem 0;
     font-weight: bold;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.2rem;
     color: ${({ theme }) => theme.primaryDark};
     text-decoration: none;
     transition: color 0.3s linear;
     
     @media (max-width: ${({ theme }) => theme.mobile}) {
-      font-size: 1.5rem;
+      font-size: 1rem;
       text-align: center;
     }
 
