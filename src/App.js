@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { ThemeProvider } from 'styled-components';
+import { useOnClickOutside } from './hooks';
 import { GlobalStyles } from './helper/global';
 import { theme } from './helper/theme';
 import { Burger, Menu } from './components';
@@ -7,6 +8,8 @@ import { Burger, Menu } from './components';
 
 function App() {
   const [open, setOpen] = useState(false);
+  const node = useRef();
+  useOnClickOutside(node, () => setOpen(false));
   return (
     <ThemeProvider theme={theme}>
       <>
@@ -18,7 +21,7 @@ function App() {
           <img src="https://www.rocketmortgage.com/resources-cmsassets/RocketMortgage.com/Article_Images/Large_Images/TypesOfHomes/types-of-homes-hero.jpg" alt="burger icon" />
           <small>Made by Emmy from www.esconnect.com</small>
         </div>
-        <div>
+        <div ref={node}>
           <Burger open={open} setOpen={setOpen} />
           <Menu open={open} setOpen={setOpen} />
         </div>
