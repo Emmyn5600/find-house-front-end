@@ -29,3 +29,5 @@ export const StyledBurger = styled.button`
     transform-origin: 1px;
   }
 `;
+
+export default StyledBurger;
