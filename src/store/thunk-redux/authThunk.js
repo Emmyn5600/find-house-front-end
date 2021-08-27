@@ -1,4 +1,5 @@
 import axios from "axios";
+import jwtDecode from "jwt-decode";
 import { apiFetchStart, signUpUserSuccess, signUpUserFail, signInUserSuccess, signInUserFail } from "../actions/actionCreators";
 const endPoint = 'https://young-ravine-73545.herokuapp.com';
 
@@ -16,7 +17,10 @@ export const loginUserAsync = (user) => async (dispatch) => {
     dispatch(apiFetchStart())
     try {
         const response = await axios.post(`${endPoint}/auth/login`, user);
-        dispatch(signInUserSuccess(response.data));
+        const token = response.data.token;
+        const data = jwtDecode.decode(token);
+        dispatch(signInUserSuccess(data));
+        localStorage.setItem('authToken', JSON.stringify(token));
     } catch (error) {
         dispatch(signInUserFail(error));
     }
