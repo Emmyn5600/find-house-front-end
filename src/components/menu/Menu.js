@@ -12,9 +12,6 @@ const Menu = ({ open }) => {
         My Rents
       </a>
       <a href="/">
-        Contact Us
-      </a>
-      <a href="/">
         Login
       </a>
       <a href="/">
