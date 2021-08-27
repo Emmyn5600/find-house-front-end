@@ -35,3 +35,5 @@ const auth = (state = initialstate, action) => {
         return state
   }
 }
+
+export default auth;
