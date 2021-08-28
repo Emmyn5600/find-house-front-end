@@ -14,7 +14,7 @@ const SignUp = (props) => {
     const { currentUser, history } = props;
     if (token) history.replace('/');
     return currentUser ? history.replace('/login') : '';
-  });
+  }, []);
   const handleSubmit = (values) => {
     const { signupUser } = props;
     const { email, password } = values;

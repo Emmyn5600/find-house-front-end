@@ -1,5 +1,4 @@
-import { LOAD_HOUSES_SUCCESS, LOAD_HOUSES_FAIL } from '../actions/actionTypes';
-import { API_FETCH_START } from '../actions/actionTypes';
+import { API_FETCH_START, LOAD_HOUSES_SUCCESS, LOAD_HOUSES_FAIL } from '../actions/actionTypes';
 
 const initialstate = {
   loading: false,
@@ -32,7 +31,7 @@ const houses = (state = initialstate, action) => {
       };
     default:
       return state;
-  };
+  }
 };
 
 export default houses;

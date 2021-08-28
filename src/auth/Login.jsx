@@ -9,7 +9,7 @@ const Login = ({ loginUser, history, isAuthenticated }) => {
     if (isAuthenticated) history.replace('/');
     const token = localStorage.getItem('authToken');
     return token ? history.replace('/') : '';
-  });
+  }, []);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const handleChange = ({ target }) => {
