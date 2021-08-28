@@ -14,9 +14,12 @@ export const signupUserAsync = (user) => async (dispatch) => {
   dispatch(apiFetchStart());
   try {
     const response = await axios.post(`${endPoint}/users`, user);
+    console.log(response);
     dispatch(signUpUserSuccess(response.data));
+    // localStorage.setItem('registerUser', JSON.stringify())
   } catch (error) {
-    dispatch(signUpUserFail(error));
+    console.log(error.response);
+    dispatch(signUpUserFail(error.response ? error.response.data.errors[0] : 'Something went wrong'));
   }
 };
 

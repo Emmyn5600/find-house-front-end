@@ -18,7 +18,7 @@ const auth = (state = initialstate, action) => {
     case API_FETCH_START:
       return {
         ...state,
-        login: true,
+        loading: true,
         error: null,
       };
 
