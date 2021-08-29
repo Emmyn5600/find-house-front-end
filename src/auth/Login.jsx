@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { loginUserAsync } from '../store/thunk-redux/authThunk';
+import './Login.css';
 
 /* eslint arrow-body-style: */
 const Login = ({ loginUser, history, isAuthenticated }) => {
@@ -26,8 +27,10 @@ const Login = ({ loginUser, history, isAuthenticated }) => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className="login">
+      <div className="login-triangle" />
+      <h2 className="login-header">Log in</h2>
+      <form onSubmit={handleSubmit} className="login-container">
         <input
           type="email"
           name="email"
@@ -44,7 +47,7 @@ const Login = ({ loginUser, history, isAuthenticated }) => {
           placeholder="password"
           required
         />
-        <button type="submit"> Login </button>
+        <input type="submit" value="Log in" />
       </form>
     </div>
   );
