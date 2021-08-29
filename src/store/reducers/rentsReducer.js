@@ -1,4 +1,12 @@
-import { API_FETCH_START, ADD_TO_RENTS_SUCCESS, ADD_TO_RENTS_FAIL ,LOAD_RENTS_SUCCESS, LOAD_RENTS_FAIL, REMOVE_TO_RENTS_SUCCESS, REMOVE_TO_RENTS_FAIL } from '../actions/actionTypes';
+import {
+  API_FETCH_START,
+  ADD_TO_RENTS_SUCCESS,
+  ADD_TO_RENTS_FAIL,
+  LOAD_RENTS_SUCCESS,
+  LOAD_RENTS_FAIL,
+  REMOVE_TO_RENTS_SUCCESS,
+  REMOVE_TO_RENTS_FAIL,
+} from '../actions/actionTypes';
 
 const initialstate = {
   loading: false,
@@ -16,7 +24,7 @@ const rents = (state = initialstate, action) => {
       };
 
     case ADD_TO_RENTS_SUCCESS:
-        return {
+      return {
         ...state,
         list: [...state.list, action.payload],
         loading: false,
@@ -24,26 +32,26 @@ const rents = (state = initialstate, action) => {
       };
 
     case REMOVE_TO_RENTS_SUCCESS:
-        return {
+      return {
         ...state,
-        list: list.map(list => list.id !== action.payload.id),
+        list: state.list.map((rent) => rent.id !== action.payload.id),
         loading: false,
         error: null,
-        }
+      };
 
     case REMOVE_TO_RENTS_FAIL:
-        return {
-          ...state,
-          error: action.payload,
-          loading: false,
-        }
-    
+      return {
+        ...state,
+        error: action.payload,
+        loading: false,
+      };
+
     case ADD_TO_RENTS_FAIL:
-        return {
-          ...state,
-          error: action.payload,
-          loading: false,
-        };
+      return {
+        ...state,
+        error: action.payload,
+        loading: false,
+      };
 
     case LOAD_RENTS_SUCCESS:
       return {

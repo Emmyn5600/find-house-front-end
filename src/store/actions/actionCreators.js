@@ -54,13 +54,13 @@ export const addToRentsSuccess = (house) => ({
 });
 
 export const removeToRentsSuccess = (house) => ({
-   type: REMOVE_TO_RENTS_SUCCESS,
-   payload: house,
+  type: REMOVE_TO_RENTS_SUCCESS,
+  payload: house,
 });
 
 export const removeToRentsFail = (error) => ({
-   type: REMOVE_TO_RENTS_FAIL,
-   payload: error,
+  type: REMOVE_TO_RENTS_FAIL,
+  payload: error,
 });
 
 export const addToRentsFail = (error) => ({

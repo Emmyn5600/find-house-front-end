@@ -1,7 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { Button } from 'react-bootstrap';
-import Card from 'react-bootstrap/Card';
 import { connect } from 'react-redux';
 import jwtDecode from 'jwt-decode';
 import PropTypes from 'prop-types';
@@ -11,6 +9,7 @@ import { theme } from '../helper/theme';
 import { Burger, Menu } from '../components';
 import { signInUserSuccess } from '../store/actions/actionCreators';
 import { loadHousesAsync } from '../store/thunk-redux/housesThunk';
+import House from '../components/House';
 import './Home.css';
 
 function Home({
@@ -40,30 +39,7 @@ function Home({
         {houses.map((house) => {
           /* eslint arrow-body-style: */
           return (
-            <div className="pm sc-iwsKbI hRZzmY" key={house.id}>
-              <div className="border-line" />
-              <div className="blocks-container">
-                <Card style={{ width: '38rem' }}>
-                  <Card.Img className="houseimg" variant="top" src={house.image} />
-                  <Card.Body>
-                    <Card.Title className="title">{house.name}</Card.Title>
-                    <Card.Text className="description">
-                      <span>
-                        Description:
-                        {house.description}
-                      </span>
-                    </Card.Text>
-                    <Card.Text className="price">
-                      <span>
-                        Price: $
-                        {house.price}
-                      </span>
-                    </Card.Text>
-                    <Button className="button">ADD TO RENT</Button>
-                  </Card.Body>
-                </Card>
-              </div>
-            </div>
+            <House house={house} key={house.id} />
           );
         })}
       </>
