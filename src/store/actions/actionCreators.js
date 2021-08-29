@@ -6,8 +6,12 @@ import {
   SIGNIN_USER_FAIL,
   LOAD_HOUSES_SUCCESS,
   LOAD_HOUSES_FAIL,
+  ADD_TO_RENTS_SUCCESS,
+  REMOVE_TO_RENTS_SUCCESS,
+  ADD_TO_RENTS_FAIL,
   LOAD_RENTS_SUCCESS,
   LOAD_RENTS_FAIL,
+  REMOVE_TO_RENTS_FAIL,
 } from './actionTypes';
 
 export const apiFetchStart = () => ({
@@ -44,12 +48,32 @@ export const loadHousesFail = (error) => ({
   payload: error,
 });
 
+export const addToRentsSuccess = (house) => ({
+  type: ADD_TO_RENTS_SUCCESS,
+  payload: house,
+});
+
+export const removeToRentsSuccess = (house) => ({
+   type: REMOVE_TO_RENTS_SUCCESS,
+   payload: house,
+});
+
+export const removeToRentsFail = (error) => ({
+   type: REMOVE_TO_RENTS_FAIL,
+   payload: error,
+});
+
+export const addToRentsFail = (error) => ({
+  type: ADD_TO_RENTS_FAIL,
+  payload: error,
+});
+
 export const loadRentsSuccess = (rents) => ({
   type: LOAD_RENTS_SUCCESS,
-  payload: rents
-})
+  payload: rents,
+});
 
 export const loadRentsFail = (error) => ({
   type: LOAD_RENTS_FAIL,
   payload: error,
-})
+});
