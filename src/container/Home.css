@@ -1,0 +1,126 @@
+.hRZzmY {
+  display: grid;
+  grid-column: 1;
+  background: #c4bdac;
+  box-shadow: 0 4px 6px rgb(0 0 0 / 7%);
+  border-radius: 12px;
+  border: 0 solid transparent;
+  margin: 1rem;
+  height: auto;
+  align-items: flex-start;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0;
+  flex-wrap: wrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.hRZzmY .border-line {
+  height: 7px;
+  width: 100%;
+  background: linear-gradient(89.35deg, #ffa05c 0%, #ff7958 99.99%);
+  overflow: hidden;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.hRZzmY.pm .border-line {
+  background: #1c252e;
+}
+
+.hRZzmY .blocks-container {
+  padding: 35px;
+  overflow: hidden;
+}
+
+.hRZzmY:hover {
+  box-shadow: 0 15px 30px #4c2818;
+}
+
+.hRZzmY img {
+  height: 230px;
+  width: 400px;
+}
+
+.hRZzmY img:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.2);
+  transition: width 400ms, height 400ms, background-color 400ms, transform 400ms;
+}
+
+.hRZzmY .title {
+  font-size: 20px !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 600;
+  color: #212b36;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2;
+  text-align: left;
+  margin-top: 20px !important;
+}
+
+.hRZzmY .description {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.4;
+  min-height: 117px;
+  -webkit-letter-spacing: 0.2px !important;
+  -moz-letter-spacing: 0.2px !important;
+  -ms-letter-spacing: 0.2px !important;
+  letter-spacing: 0.2px !important;
+  text-align: left;
+  color: #28292e;
+  text-decoration: none;
+}
+
+.price {
+  color: #000;
+  background-color: #5e544e;
+}
+
+.hRZzmY.os .border-line {
+  background: #1c252e;
+}
+
+.hRZzmY.api .border-line {
+  background: #1c252e;
+}
+
+.hRZzmY.ui .border-line {
+  background: #1c252e;
+}
+
+.hRZzmY.cli .border-line {
+  background: #1c252e;
+}
+
+.hRZzmY.ds .border-line {
+  background: #1c252e;
+}
+
+.button {
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+  border-radius: 6px;
+  width: 170px;
+  height: 40px;
+  font-size: 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-bottom: 20px;
+  background-color: #daf6e6;
+}
+
+.button:hover {
+  color: #a17362;
+}

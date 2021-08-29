@@ -24,7 +24,7 @@ html, body {
     display: flex;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     height: 100vh;
-    width: 50%;
+    width: 100%;
     justify-content: center;
     text-rendering: optimizeLegibility;
   }

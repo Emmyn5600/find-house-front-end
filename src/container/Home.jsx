@@ -1,8 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
-import Figure from 'react-bootstrap/Figure';
-import FigureImage from 'react-bootstrap/FigureImage';
-import FigureCaption from 'react-bootstrap/FigureCaption';
+import { Button } from 'react-bootstrap';
+import Card from 'react-bootstrap/Card';
 import { connect } from 'react-redux';
 import jwtDecode from 'jwt-decode';
 import PropTypes from 'prop-types';
@@ -12,6 +11,7 @@ import { theme } from '../helper/theme';
 import { Burger, Menu } from '../components';
 import { signInUserSuccess } from '../store/actions/actionCreators';
 import { loadHousesAsync } from '../store/thunk-redux/housesThunk';
+import './Home.css';
 
 function Home({
   history, signinUser, loadHouses, houses,
@@ -31,30 +31,41 @@ function Home({
   const handleToggleMenu = (state) => {
     setOpen(state);
   };
-  console.log(houses);
   return (
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyles />
         <Burger setOpen={handleToggleMenu} open={open} />
         <Menu open={open} />
-        <h1>Find My House</h1>
-        <Figure>
-          <FigureImage
-            width={450}
-            height={485}
-            alt="171x180"
-            src="https://www.rocketmortgage.com/resources-cmsassets/RocketMortgage.com/Article_Images/Large_Images/TypesOfHomes/types-of-homes-hero.jpg"
-          />
-          <FigureCaption>
-            You are looking for awesome house in Rwanda.
-            Keep calm you get what you are looking for.
-          </FigureCaption>
-        </Figure>
-        <div ref={node}>
-          <Burger open={open} setOpen={setOpen} />
-          <Menu open={open} setOpen={setOpen} />
-        </div>
+        {houses.map((house) => {
+          /* eslint arrow-body-style: */
+          return (
+            <div className="pm sc-iwsKbI hRZzmY" key={house.id}>
+              <div className="border-line" />
+              <div className="blocks-container">
+                <Card style={{ width: '38rem' }}>
+                  <Card.Img className="houseimg" variant="top" src={house.image} />
+                  <Card.Body>
+                    <Card.Title className="title">{house.name}</Card.Title>
+                    <Card.Text className="description">
+                      <span>
+                        Description:
+                        {house.description}
+                      </span>
+                    </Card.Text>
+                    <Card.Text className="price">
+                      <span>
+                        Price: $
+                        {house.price}
+                      </span>
+                    </Card.Text>
+                    <Button className="button">ADD TO RENT</Button>
+                  </Card.Body>
+                </Card>
+              </div>
+            </div>
+          );
+        })}
       </>
     </ThemeProvider>
   );
