@@ -6,6 +6,8 @@ import {
   SIGNIN_USER_FAIL,
   LOAD_HOUSES_SUCCESS,
   LOAD_HOUSES_FAIL,
+  LOAD_RENTS_SUCCESS,
+  LOAD_RENTS_FAIL,
 } from './actionTypes';
 
 export const apiFetchStart = () => ({
@@ -41,3 +43,13 @@ export const loadHousesFail = (error) => ({
   type: LOAD_HOUSES_FAIL,
   payload: error,
 });
+
+export const loadRentsSuccess = (rents) => ({
+  type: LOAD_RENTS_SUCCESS,
+  payload: rents
+})
+
+export const loadRentsFail = (error) => ({
+  type: LOAD_RENTS_FAIL,
+  payload: error,
+})

@@ -25,7 +25,7 @@ const Login = ({ loginUser, history, isAuthenticated }) => {
     event.preventDefault();
     loginUser({ email, password });
   };
-
+  if (isAuthenticated) history.replace('/');
   return (
     <div className="login">
       <div className="login-triangle" />

@@ -7,6 +7,7 @@ import { signupUserAsync } from '../store/thunk-redux/authThunk';
 import validationSchema from '../components/validation/userValidation';
 import SubmitBtn from '../common/SubmitButton';
 import InputForm from '../common/InputForm';
+import './Register.css';
 
 const SignUp = (props) => {
   useEffect(() => {
@@ -30,8 +31,8 @@ const SignUp = (props) => {
   const { loading } = props;
   console.log(loading);
   return (
-    <div className="login-page-main-container signup d-flex flex-column">
-      <div className="login-overlay" />
+    <div className="">
+      <div className="" />
       <AppForm
         initialValues={{
           email: '',
@@ -43,7 +44,7 @@ const SignUp = (props) => {
         validate={validationSchema}
       >
         <form className="">
-          <div className="">
+          <div className="container">
             <h1>Sign up</h1>
             <p>
               Hey there, Welcome to EsconnectHouses.
@@ -55,10 +56,10 @@ const SignUp = (props) => {
           <InputForm name="email" placeholder="Email" type="email" />
           <InputForm name="password" placeholder="Password" type="password" />
           <InputForm name="passwordConfirmation" placeholder="Password Confirmation" type="password" />
-          <SubmitBtn title="SignUp" />
+          <SubmitBtn title="SignUp" className="registerbtn1" />
         </form>
       </AppForm>
-      <div className="">
+      <div className="container signin">
         Already have an account?
         <Link to="/login" className="">
           Sign in here
