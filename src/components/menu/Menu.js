@@ -11,13 +11,7 @@ const Menu = ({ open }) => {
       <a href="/">
         My Rents
       </a>
-      <a href="/">
-        Login
-      </a>
-      <a href="/">
-        Register
-      </a>
-      <a href="/">
+      <a href="/login">
         Logout
       </a>
     </StyledMenu>

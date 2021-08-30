@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { toast } from 'react-toastify';
 import jwtDecode from 'jwt-decode';
 import {
   apiFetchStart,
@@ -21,14 +22,15 @@ export const addToRentsAsync = (house) => async (dispatch) => {
       user_id: userId,
       house_id: house.id,
     });
-    // console.log(response);
     dispatch(loadRentsSuccess(response.data.data));
+    toast.success('Add To Rent succesffuly');
   } catch (error) {
     dispatch(
       loadRentsFail(
         error.response ? error.response.data.errors : 'Something went wrong',
       ),
     );
+    toast.error(error.response ? error.response.data.errors : 'Something went wrong');
   }
 };
 
@@ -42,12 +44,14 @@ export const removeToRentsAsync = (rentId) => async (dispatch) => {
       },
     });
     dispatch(removeToRentsSuccess(response.data));
+    toast.success('Remove To Rent succesffuly');
   } catch (error) {
     dispatch(
       removeToRentsFail(
         error.response ? error.response.data.errors : 'Something went wrong',
       ),
     );
+    toast.error(error.response ? error.response.data.errors : 'Something went wrong');
   }
 };
 
