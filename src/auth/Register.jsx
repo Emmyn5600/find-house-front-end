@@ -33,8 +33,8 @@ const SignUp = (props) => {
   console.log(loading);
   if (currentUser) history.replace('/login');
   return (
-    <div className="">
-      <div className="" />
+    <div className="login">
+      <div className="login-triangle" />
       <AppForm
         initialValues={{
           email: '',
@@ -45,20 +45,15 @@ const SignUp = (props) => {
         onSubmit={handleSubmit}
         validate={validationSchema}
       >
-        <form className="">
+        <form className="login-container">
           <div className="container">
-            <h1>Sign up</h1>
-            <p>
-              Hey there, Welcome to EsconnectHouses.
-              <br />
-              Let&apos;s create an account to start find our house.
-            </p>
+            <h1 className="login-header">Sign up</h1>
           </div>
           <InputForm name="name" placeholder="Name" type="name" />
           <InputForm name="email" placeholder="Email" type="email" />
           <InputForm name="password" placeholder="Password" type="password" />
           <InputForm name="passwordConfirmation" placeholder="Password Confirmation" type="password" />
-          <SubmitBtn title="SignUp" className="registerbtn1" />
+          <SubmitBtn title="SignUp" />
         </form>
       </AppForm>
       <div className="container signin">

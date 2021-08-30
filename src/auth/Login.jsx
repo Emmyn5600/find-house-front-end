@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { loginUserAsync } from '../store/thunk-redux/authThunk';
 import './Login.css';
 
-/* eslint arrow-body-style: */
 const Login = ({ loginUser, history, isAuthenticated }) => {
   useEffect(() => {
     if (isAuthenticated) history.replace('/');
@@ -49,6 +49,12 @@ const Login = ({ loginUser, history, isAuthenticated }) => {
         />
         <input type="submit" value="Log in" />
       </form>
+      <div className="container signin">
+        Do not have an account?
+        <Link to="/register" className="">
+          Sign Up here
+        </Link>
+      </div>
     </div>
   );
 };
