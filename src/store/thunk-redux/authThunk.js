@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { toast } from 'react-toastify';
 import jwtDecode from 'jwt-decode';
 import {
   apiFetchStart,
@@ -15,8 +16,10 @@ export const signupUserAsync = (user) => async (dispatch) => {
   try {
     const response = await axios.post(`${endPoint}/users`, user);
     dispatch(signUpUserSuccess(response.data));
+    toast.success('user signup succesffuly');
   } catch (error) {
     dispatch(signUpUserFail(error.response ? error.response.data.errors[0] : 'Something went wrong'));
+    toast.error(error.response ? error.response.data.errors[0] : 'Something went wrong');
   }
 };
 
@@ -28,7 +31,9 @@ export const loginUserAsync = (user) => async (dispatch) => {
     const data = jwtDecode(token);
     dispatch(signInUserSuccess(data));
     localStorage.setItem('authToken', JSON.stringify(token));
+    toast.success('user login succesffuly');
   } catch (error) {
     dispatch(signInUserFail(error.response ? error.response.data.error : 'Something went wrong'));
+    toast.error(error.response ? error.response.data.error : 'Something went wrong');
   }
 };

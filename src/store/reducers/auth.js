@@ -25,7 +25,7 @@ const auth = (state = initialstate, action) => {
     case SIGNUP_USER_SUCCESS:
       return {
         ...state,
-        isAuthenticated: true,
+        isAuthenticated: false,
         error: null,
         loading: false,
         currentUser: action.payload,

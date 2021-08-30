@@ -10,6 +10,7 @@ import InputForm from '../common/InputForm';
 import './Register.css';
 
 const SignUp = (props) => {
+  const { currentUser, history } = props;
   useEffect(() => {
     const token = localStorage.getItem('authToken');
     const { currentUser, history } = props;
@@ -30,6 +31,7 @@ const SignUp = (props) => {
 
   const { loading } = props;
   console.log(loading);
+  if (currentUser) history.replace('/login');
   return (
     <div className="">
       <div className="" />
