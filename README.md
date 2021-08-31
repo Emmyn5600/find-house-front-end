@@ -6,8 +6,12 @@
 
 ## How it looks
 
-![screenshot](./img1.png)
-![screenshot](./img2.png)
+![screenshot](./login.png)
+![screenshot](./signup.png)
+![screenshot](./home.png)
+![screenshot](./home1.png)
+![screenshot](./home3.png)
+
 
 ## Built With
 
