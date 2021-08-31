@@ -12,6 +12,7 @@ import {
   LOAD_RENTS_SUCCESS,
   LOAD_RENTS_FAIL,
   REMOVE_TO_RENTS_FAIL,
+  LOGOUT_USER_SUCCESS,
 } from './actionTypes';
 
 export const apiFetchStart = () => ({
@@ -76,4 +77,8 @@ export const loadRentsSuccess = (rents) => ({
 export const loadRentsFail = (error) => ({
   type: LOAD_RENTS_FAIL,
   payload: error,
+});
+
+export const logoutUserSuccess = () => ({
+  type: LOGOUT_USER_SUCCESS,
 });

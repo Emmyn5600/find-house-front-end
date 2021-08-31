@@ -4,33 +4,38 @@ import PropTypes from 'prop-types';
 import { loadRentsAsync } from '../store/thunk-redux/rentThunk';
 import House from '../components/House';
 
-const Rent = ({ history, loadRents, rents }) => {
+const Rent = ({
+  history, loadRents, houses,
+}) => {
   useEffect(() => {
     const token = localStorage.getItem('authToken');
     if (!token) history.replace('/login');
     loadRents();
   }, []);
   return (
-    <div>
-      {rents.map((rent) => {
-        /* eslint arrow-body-style: */
-        return (
-          <House house={rent.house} key={rent.id} rentId={rent.id} />
-        );
-      })}
-    </div>
+    <>
+      {houses.length > 0 ? (
+        <div>
+          {houses.map((house) => (
+            <House house={house} key={house.id} />
+          ))}
+        </div>
+      ) : (
+        'List is empty'
+      )}
+    </>
   );
 };
 
 Rent.propTypes = {
   history: PropTypes.objectOf(PropTypes.any).isRequired,
   loadRents: PropTypes.func.isRequired,
-  rents: PropTypes.arrayOf(PropTypes.any).isRequired,
+  houses: PropTypes.arrayOf(PropTypes.any).isRequired,
 };
 
 const mapStateToProps = (state) => ({
   loading: state.rents.loading,
-  rents: state.rents.list,
+  houses: state.rents.list.map((rent) => rent.house),
 });
 
 const mapDispatchToProps = {

@@ -1,19 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { bool } from 'prop-types';
 import { StyledMenu } from './Menu.styled';
 /* eslint arrow-body-style: */
 const Menu = ({ open }) => {
   return (
     <StyledMenu open={open}>
-      <a href="/">
+      <Link to="/">
         Home
-      </a>
-      <a href="/">
+      </Link>
+      <Link to="/rents">
         My Rents
-      </a>
-      <a href="/login">
+      </Link>
+      <Link to="/logout">
         Logout
-      </a>
+      </Link>
     </StyledMenu>
   );
 };

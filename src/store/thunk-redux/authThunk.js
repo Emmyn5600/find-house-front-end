@@ -7,6 +7,7 @@ import {
   signUpUserFail,
   signInUserSuccess,
   signInUserFail,
+  logoutUserSuccess,
 } from '../actions/actionCreators';
 
 const endPoint = 'https://young-ravine-73545.herokuapp.com';
@@ -36,4 +37,9 @@ export const loginUserAsync = (user) => async (dispatch) => {
     dispatch(signInUserFail(error.response ? error.response.data.error : 'Something went wrong'));
     toast.error(error.response ? error.response.data.error : 'Something went wrong');
   }
+};
+
+export const logoutUser = () => (dispatch) => {
+  localStorage.removeItem('authToken');
+  dispatch(logoutUserSuccess());
 };

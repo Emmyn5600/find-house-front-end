@@ -6,6 +6,7 @@ import Login from './auth/Login';
 import Register from './auth/Register';
 import Home from './container/Home';
 import RentsList from './container/RentsList';
+import Logout from './container/Logout';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
         <Route path="/rents" component={RentsList} />
+        <Route path="/logout" component={Logout} />
         <Route path="/" component={Home} />
       </Switch>
     </div>

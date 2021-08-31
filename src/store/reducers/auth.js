@@ -4,6 +4,7 @@ import {
   SIGNUP_USER_FAIL,
   SIGNIN_USER_SUCCESS,
   SIGNIN_USER_FAIL,
+  LOGOUT_USER_SUCCESS,
 } from '../actions/actionTypes';
 
 const initialstate = {
@@ -54,6 +55,13 @@ const auth = (state = initialstate, action) => {
         loading: false,
         error: action.payload,
       };
+
+    case LOGOUT_USER_SUCCESS:
+      return {
+        ...state,
+        isAuthenticated: false,
+        currentUser: null,
+      }
     default:
       return state;
   }

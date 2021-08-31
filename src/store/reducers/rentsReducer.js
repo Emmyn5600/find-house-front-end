@@ -34,7 +34,7 @@ const rents = (state = initialstate, action) => {
     case REMOVE_TO_RENTS_SUCCESS:
       return {
         ...state,
-        list: state.list.map((rent) => rent.id !== action.payload.id),
+        list: state.list.filter((rent) => rent.id !== action.payload.id),
         loading: false,
         error: null,
       };

@@ -7,6 +7,7 @@ import {
   loadRentsFail,
   removeToRentsSuccess,
   removeToRentsFail,
+  addToRentsSuccess,
 } from '../actions/actionCreators';
 
 const endPoint = 'https://young-ravine-73545.herokuapp.com';
@@ -17,12 +18,13 @@ export const addToRentsAsync = (house) => async (dispatch) => {
   dispatch(apiFetchStart());
   try {
     const token = JSON.parse(localStorage.getItem('authToken'));
+    axios.defaults.headers.common.Authorization = token;
     const { user_id: userId } = jwtDecode(token);
     const response = await axios.post(`${endPoint}/api/v1/rents/`, {
       user_id: userId,
       house_id: house.id,
     });
-    dispatch(loadRentsSuccess(response.data.data));
+    dispatch(addToRentsSuccess(response.data));
     toast.success('Add To Rent succesffuly');
   } catch (error) {
     dispatch(
@@ -43,7 +45,7 @@ export const removeToRentsAsync = (rentId) => async (dispatch) => {
         Authorization: token,
       },
     });
-    dispatch(removeToRentsSuccess(response.data));
+    dispatch(removeToRentsSuccess(response.data.data));
     toast.success('Remove To Rent succesffuly');
   } catch (error) {
     dispatch(
