@@ -3,6 +3,7 @@ import { Button } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import {
   loadRentsAsync,
   addToRentsAsync,
@@ -23,7 +24,9 @@ const House = ({
           <div className="border-line" />
           <div className="blocks-container">
             <Card style={{ width: '38rem' }}>
-              <Card.Img className="houseimg" variant="top" src={house.image} />
+              <Link to={`/houses/${house.id}`}>
+                <Card.Img className="houseimg" variant="top" src={house.image} />
+              </Link>
               <Card.Body>
                 <Card.Title className="title">{house.name}</Card.Title>
                 <Card.Text className="description">

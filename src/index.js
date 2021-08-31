@@ -6,9 +6,6 @@ import App from './App';
 import createStore from './store/createStore';
 
 const store = createStore();
-store.subscribe(() => {
-  console.log(store.getState());
-});
 
 ReactDOM.render(
   <React.StrictMode>

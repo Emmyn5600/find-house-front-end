@@ -29,8 +29,6 @@ const SignUp = (props) => {
     signupUser(user);
   };
 
-  const { loading } = props;
-  console.log(loading);
   if (currentUser) history.replace('/login');
   return (
     <div className="login">
@@ -67,19 +65,16 @@ const SignUp = (props) => {
 };
 
 SignUp.defaultProps = {
-  loading: false,
   currentUser: null,
 };
 
 SignUp.propTypes = {
   signupUser: PropTypes.func.isRequired,
-  loading: PropTypes.bool,
   currentUser: PropTypes.objectOf(PropTypes.any),
   history: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
 const mapStateToProps = (state) => ({
-  loading: state.auth.loading,
   currentUser: state.auth.currentUser,
 });
 

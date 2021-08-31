@@ -7,6 +7,7 @@ import Register from './auth/Register';
 import Home from './container/Home';
 import RentsList from './container/RentsList';
 import Logout from './container/Logout';
+import HouseDetails from './container/HouseDetails';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/register" component={Register} />
         <Route path="/rents" component={RentsList} />
         <Route path="/logout" component={Logout} />
+        <Route path="/houses/:id" component={HouseDetails} />
         <Route path="/" component={Home} />
       </Switch>
     </div>
