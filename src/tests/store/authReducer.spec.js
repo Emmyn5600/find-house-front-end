@@ -23,10 +23,10 @@ describe('Auth reducer', () => {
   it('should handle SIGNUP_SUCCESS', () => {
     store.dispatch({
       type: 'SIGNUP_USER_SUCCESS',
-      payload: {name: 'user1' },
+      payload: { name: 'user1' },
     });
     expect(store.getState().auth).toEqual({
-      currentUser: {name: 'user1' },
+      currentUser: { name: 'user1' },
       isAuthenticated: false,
       loading: false,
       error: null,
@@ -36,7 +36,7 @@ describe('Auth reducer', () => {
   it('should handle SIGNUP_FAILURE', () => {
     store.dispatch({ type: 'SIGNUP_USER_FAIL', payload: 'Signup failed' });
     expect(store.getState().auth).toEqual({
-      currentUser: {name: 'user1'},
+      currentUser: { name: 'user1' },
       isAuthenticated: false,
       loading: false,
       error: 'Signup failed',
@@ -46,7 +46,7 @@ describe('Auth reducer', () => {
   it('should not handle LOAD_COURSES_SUCCESS', () => {
     store.dispatch({ type: 'LOAD_HOUSES_SUCCESS' });
     expect(store.getState().auth).toEqual({
-      currentUser: {name: 'user1'},
+      currentUser: { name: 'user1' },
       isAuthenticated: false,
       loading: false,
       error: 'Signup failed',
@@ -62,14 +62,14 @@ describe('Auth reducer', () => {
       currentUser: { name: 'user1' },
       isAuthenticated: true,
       loading: false,
-      error: "Signup failed",
+      error: 'Signup failed',
     });
   });
 
   it('should handle SIGNIN_FAILURE action', () => {
     store.dispatch({ type: 'SIGNIN_USER_FAIL', payload: 'SIGNIN failed' });
     expect(store.getState().auth).toEqual({
-      currentUser: {name: 'user1' },
+      currentUser: { name: 'user1' },
       isAuthenticated: false,
       loading: false,
       error: 'SIGNIN failed',

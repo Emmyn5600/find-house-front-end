@@ -61,7 +61,7 @@ const auth = (state = initialstate, action) => {
         ...state,
         isAuthenticated: false,
         currentUser: null,
-      }
+      };
     default:
       return state;
   }
