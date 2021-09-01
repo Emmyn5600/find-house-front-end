@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home should render correctly 1`] = `
+Array [
+  <button
+    className="sc-bdfBQB dQQSnr"
+    onClick={[Function]}
+    open={false}
+  >
+    <div />
+    <div />
+    <div />
+  </button>,
+  <nav
+    className="sc-gsTEea fpQRFU"
+    open={false}
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      Home
+    </a>
+    <a
+      href="/rents"
+      onClick={[Function]}
+    >
+      My Rents
+    </a>
+    <a
+      href="/logout"
+      onClick={[Function]}
+    >
+      Logout
+    </a>
+  </nav>,
+]
+`;
