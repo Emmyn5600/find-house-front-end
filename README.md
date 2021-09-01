@@ -21,7 +21,7 @@
 
 # Live demo
 
-Visit [this link]()
+Visit [this link](https://findmyhouse.netlify.app/)
 
 # Getting Started
 
@@ -119,7 +119,6 @@ Give a ⭐️ if you like this project!❤️
 ## Acknowledgments
 
 - Microverse
-- [Cuberto](https://dribbble.com/cuberto) for the design inspiration
 
 ## License
 
