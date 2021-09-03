@@ -1,0 +1,91 @@
+.container {
+  padding: 16px;
+}
+
+input[type=text],
+input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus,
+input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+a {
+  color: dodgerblue;
+}
+
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.login-triangle {
+  width: 0;
+  margin-right: auto;
+  margin-left: auto;
+  border: 12px solid transparent;
+  border-bottom-color: #888;
+}
+
+.login {
+  width: 400px;
+  margin: 16px auto;
+  font-size: 16px;
+}
+
+.login-header,
+.login p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.login-container {
+  background: #ebebeb;
+  padding: 12px;
+}
+
+.btn1 {
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  width: 170px;
+  height: 40px;
+  font-size: 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-bottom: 20px;
+  background-color: #888;
+}
+
+.login input[type="submit"] {
+  background: #888;
+  border-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.login input[type="submit"]:hover {
+  background: #888;
+}
+
+.login input[type="submit"]:focus {
+  border-color: #888;
+}
