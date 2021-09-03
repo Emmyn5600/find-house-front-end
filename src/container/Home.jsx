@@ -31,19 +31,21 @@ function Home({
     setOpen(state);
   };
   return (
-    <ThemeProvider theme={theme}>
-      <>
-        <GlobalStyles />
-        <Burger setOpen={handleToggleMenu} open={open} />
-        <Menu open={open} />
-        {houses.map((house) => {
-          /* eslint arrow-body-style: */
-          return (
-            <House house={house} key={house.id} />
-          );
-        })}
-      </>
-    </ThemeProvider>
+    <section>
+      <ThemeProvider theme={theme}>
+        <>
+          <GlobalStyles />
+          <Burger setOpen={handleToggleMenu} open={open} />
+          <Menu open={open} />
+          {houses.map((house) => {
+            /* eslint arrow-body-style: */
+            return (
+              <House house={house} key={house.id} />
+            );
+          })}
+        </>
+      </ThemeProvider>
+    </section>
   );
 }
 
