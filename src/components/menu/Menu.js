@@ -5,17 +5,15 @@ import { StyledMenu } from './Menu.styled';
 /* eslint arrow-body-style: */
 const Menu = ({ open }) => {
   return (
-    <StyledMenu open={open}>
-      <Link to="/">
-        Home
-      </Link>
-      <Link to="/rents">
-        My Rents
-      </Link>
-      <Link to="/logout">
-        Logout
-      </Link>
-    </StyledMenu>
+    <header>
+      <nav>
+        <StyledMenu open={open}>
+          <Link to="/">Home</Link>
+          <Link to="/rents">My Rents</Link>
+          <Link to="/logout">Logout</Link>
+        </StyledMenu>
+      </nav>
+    </header>
   );
 };
 Menu.propTypes = {
